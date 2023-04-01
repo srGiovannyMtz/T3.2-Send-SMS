@@ -1,0 +1,81 @@
+object frmSms: TfrmSms
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tbarHeader: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnSend: TButton
+      Align = Right
+      Position.X = 560.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'playtoolbuttonbordered'
+      TabOrder = 0
+      Text = 'btnSend'
+      OnClick = btnSendClick
+    end
+    object btnExit: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'cleareditbutton'
+      TabOrder = 1
+      Text = 'btnExit'
+    end
+  end
+  object edtNumber: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    Align = Top
+    TabOrder = 1
+    KeyboardType = PhonePad
+    TextSettings.Font.Size = 30.000000000000000000
+    Position.Y = 40.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextPrompt = 'Numero Celular '
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object memMessage: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    MaxLength = 160
+    TextSettings.WordWrap = True
+    OnChangeTracking = memMessageChangeTracking
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 367.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 363.000000000000000000
+  end
+  object tbarStatusText: TStatusBar
+    Align = Top
+    Position.Y = 73.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object lblContText: TLabel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Total de caracteres escritos: 0 de 160'
+      TabOrder = 1
+    end
+  end
+end
